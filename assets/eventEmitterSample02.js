@@ -14,7 +14,7 @@ var people = [lewis,seb,ricciardo];
 
 people.forEach(function(person){
   person.on('speak', function(msg){
-    console.log(person.name + 'said: ' +msg);
+    console.log(person.name + ' said: ' +msg);
 
   });
 });
