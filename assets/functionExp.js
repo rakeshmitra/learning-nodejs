@@ -13,7 +13,7 @@ var myFunc = function (){
 myFunc();
 
 
-//Passing Functions as params
+//Passing Functions as params to another function
 function callFunction (fun){
    fun();
 }
