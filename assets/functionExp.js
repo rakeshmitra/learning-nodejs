@@ -7,7 +7,7 @@ sayHello();
 
 //Function Expression
 var myFunc = function (){
- console.log('Anonymous Function');
+ console.log('Anonymous Function :O');
 }
 
 myFunc();
