@@ -5,7 +5,7 @@ var counter = require('./moduleExport');
 //console.log(countArrayItems(['First','Second','Third','Fourth','Fifth']));
 
 //This will work
-console.log(counter(['First','Second','Third','Fourth','Fifth']));
+console.log(counter(['First','Second','Third','Fourth','Fifth','Sixth']));
 
 console.log(" ");
 var pattern1 = require('./moduleExportPattern1');
