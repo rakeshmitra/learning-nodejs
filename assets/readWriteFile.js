@@ -3,7 +3,7 @@ var fs = require('fs');
 //Non-Blocking or Asynchronous
 var contents = fs.readFile('readMe.txt','utf8',function(err,data){
   console.log('data for Non-blocking call which is called first  => '+data);
-  fs.writeFile('writeMe0.txt',data,function(err,data){
+  fs.writeFile('writeMe2.txt',data,function(err,data){
       console.log('file written ');
   });
 });
@@ -19,3 +19,10 @@ console.log("=====================");
 
 console.log("Writing a new file");
 fs.writeFileSync('writeMe1.txt',data);
+
+//to delete files
+fs.unlink('writeMe0.txt',function(err,data){
+  console.log('File deterd successfully');
+});
+
+fs.unlinkSync('writeMe1.txt');
