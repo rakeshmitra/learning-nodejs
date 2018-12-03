@@ -26,3 +26,10 @@ fs.unlink('writeMe0.txt',function(err,data){
 });
 
 fs.unlinkSync('writeMe1.txt');
+
+//Creating a Ddirectory
+//fs.mkdirSync('stuff2');
+
+//Removing a Directory
+fs.rmdirSync('stuff2');
+//To remove a Directory we need to remove all files inside first
