@@ -18,7 +18,7 @@ myreadStream.on('data',function(chunk){
 //Alternate approach to utilize a Pipe
 myreadStream.pipe(mywritePipeStream);
 
-//Sending the contents to client from server
+//Sending HTML contents to client from server
 var server=http.createServer(function(req,res){
   console.log('Received request from client');
   res.writeHead(200,{'Content-Type':'text/html'});
@@ -28,3 +28,19 @@ var server=http.createServer(function(req,res){
 });
 server.listen('8080','127.0.0.1');
 console.log("Server listening on Port 8080");
+
+
+//Sending JSON contents to client from server
+var server=http.createServer(function(req,res){
+  console.log('Received request from client');
+  res.writeHead(200,{'Content-Type':'application/json'});
+  var myObj = {
+    name:'Lewis',
+    age: '38yrs',
+    job:'F1 driver'
+};
+  res.end(JSON.stringify(myObj));
+
+});
+server.listen('8081','127.0.0.1');
+console.log("Server listening on Port 8081");
