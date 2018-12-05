@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <style>
+      body{background: grey;font-family: verdana;color:#fff;padding: 30px;}
+      h1{font-size: 48px;text-transform: uppercase;letter-spacing: 2px;text-align: center;}
+      h2{font-size: 42px;text-transform: uppercase;letter-spacing: 2px;text-align: left;}
+      p{font-size: 36px;text-align: center;}
+      li{font-size: 36px;text-align: center;float: left;}
+      li a:hover {  background-color: #111111;}
+    </style>
+  </head>
+  <body>
+      <% include partials/nav.ejs %>
+      <br><br><br>
+      <h1>Hey <%=userName%>! Welcome to the most awesome website on the net </h1>
+      <p><strong>Your Age as per records is: <%=userData.age%></strong></p>
+      <p><strong>Your Job as per records is: <%=userData.job%></strong></p>
+      <h2>Hobbies:</h2>
+      <ol>
+      <% userData.hobbies.forEach(function(item){%>
+          <li><%=item%></li><br><br>
+      <%});%>
+    </ol>
+  </body>
+<html>
