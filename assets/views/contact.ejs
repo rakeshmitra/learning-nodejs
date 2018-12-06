@@ -3,7 +3,7 @@
 <html>
   <head>
     <style>
-      body{background: lightgreen;font-family: verdana;color:#fff;padding: 30px;}
+      body{background: orange;font-family: verdana;color:#fff;padding: 30px;}
       h1{font-size: 48px;text-transform: uppercase;letter-spacing: 2px;text-align: center;}
       p{font-size: 16px;text-align: center;}
       li{font-size: 36px;text-align: center;float: left;}
@@ -13,6 +13,18 @@
   <body>
       <% include partials/nav.ejs %>
       <br><br><br>
-      <h1>Contact Page </h1>
+      <h1>Contact Us!</h1>
+      <h2>Welcome to Personalized Page for <%=qStr.dept%> Department </h2>
+      <form id="contact-form" method="post" action="/ContactSuccess">
+        <label for="who">Contact Person Name</label>
+        <input type="text" name="who"/>
+        <label for="dept">Department Name</label>
+        <input type="text" name="dept" value="<%=qStr.dept%>"/>
+        <label for="email">Your Email</label>
+        <input type="email" name="email"/>
+        <input type="submit" name="submit"/>
+
+      </form>
+
   </body>
 <html>
